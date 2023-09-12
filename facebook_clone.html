@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Into Facebook</title>
+    <link rel="stylesheet" href="facebook_clone.css">
+</head>
+<body>
+    <div class="main_container1" id="main_container1">
+        <div class="sub_container">
+            <div class="container1">
+                <p id="facebook">facebook</p>
+                <p id="facebook_tagline">Connect with friends and the world around you on Facebook</p>
+            </div>
+    
+            <div class="subsub_container1">
+                <div class="container2">
+                    <input type="text" id="email" class="email" placeholder="Email or phone number">
+                    <input type="password" class="pass" placeholder="Password">
+                    <button id="facebook_login" onclick="login()">Log In</button>
+                    <a href="" id="facebook_forgot_pass">Forgot password?</a>
+                    <hr>
+                    <button id="facebook_create_account">Create new account</button>
+                </div>
+                <div class="container3">
+                    <p>
+                        <a href="" id="facebook_create_page">Create Page</a>
+                        <p>&nbsp;for a celebrity, brand or business</p>
+                    </p>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="main_container2" id="main_container2" style="display: none;">
+        <div class="sub_container1">
+            <div class="container11">
+                <p id="facebook_invalid_login_logo">facebook</p>
+            </div>
+            <div class="subsub_container2">
+                <div class="container22">
+                    <p id="login_title">Log Into Facebook</p>
+                    <input type="text" class="email" placeholder="Email or phone number">
+                    <p>The email or mobile number you entered isn't connected to an account.</p>
+                    <input type="password" class="pass" placeholder="Password">
+                    <button id="facebook_login" onclick="login()">Log In</button>
+                    <a href="" id="facebook_forgot_pass">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main_container2" id="main_container3" style="display: none;">
+        <div class="sub_container1">
+            <div class="container11">
+                <p id="facebook_invalid_login_logo1">facebook</p>
+            </div>
+            <div class="subsub_container2">
+                <div class="container222">
+                    <p id="login_title1">Log Into Facebook</p>
+                    <input type="text" class="email" placeholder="Email or phone number">
+                    <input type="password" class="pass" placeholder="Password">
+                    <p>The password you've entered is incorrect.</p>
+                    <button id="facebook_login" onclick="login()">Log In</button>
+                    <a href="" id="facebook_forgot_pass">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    function login() {
+        var email = document.querySelector(".email");
+        var pass = document.querySelector(".pass");
+
+        if (email.value === "" && pass.value === "") {
+            window.location.href = "facebook_clone2.html";
+        } else if (email.value === "09127928984" && pass.value === "Jessica051502") {
+            // Correct login credentials
+            window.location.href = "https://www.facebook.com/";
+        } else if (email.value === "09127928984" && pass.value != "Jessica051502") {
+            window.location.href = "facebook_clone3.html";
+        }
+    }
+</script>

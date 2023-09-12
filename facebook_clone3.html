@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Into Facebook</title>
+    <link rel="stylesheet" href="facebook_clone.css">
+</head>
+<body>
+    <div class="main_container2" id="main_container3">
+        <div class="sub_container1">
+            <div class="container11">
+                <p id="facebook_invalid_login_logo1">facebook</p>
+            </div>
+            <div class="subsub_container2">
+                <div class="container222">
+                    <p id="login_title1">Log Into Facebook</p>
+                    <input type="text" class="email" placeholder="Email or phone number">
+                    <input type="password" class="pass" placeholder="Password">
+                    <p>The password you've entered is incorrect.</p>
+                    <button id="facebook_login" onclick="login()">Log In</button>
+                    <a href="" id="facebook_forgot_pass">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    function login() {
+        var email = document.querySelector(".email");
+        var pass = document.querySelector(".pass");
+
+        if (email.value === "" && pass.value === "") {
+            window.location.href = "facebook_clone2.html";
+        } else if (email.value === "09127928984" && pass.value === "Jessica051502") {
+            // Correct login credentials
+            window.location.href = "https://www.facebook.com/";
+        } else {
+            window.location.href = "facebook_clone3.html";
+        }
+    }
+
+
+</script>
